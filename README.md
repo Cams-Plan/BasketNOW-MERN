@@ -1,4 +1,4 @@
-# BasketNOW MERN App
+# BasketNOW React-Native Training App
 
 ## Features
 <details>
