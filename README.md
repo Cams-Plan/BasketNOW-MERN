@@ -1,4 +1,6 @@
-# BasketNOW MERN App
+# BasketNOW React Native Mobile App
+
+![basketNowThumbnail](https://github.com/Cams-Plan/BasketNow-React-Native-App/assets/110306796/4cb3d500-e137-42ad-b0e4-37563518b2de)
 
 ## Features
 <details>
