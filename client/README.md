@@ -20,3 +20,11 @@
     ```
     ...plugins: ['react-native-reanimated/plugin'],
     ```
+
+## Steps
+
+### Create the navigation
+
+- Create the main screens for the bottom tab navigation
+- Create a navigation directory to hold all the navigation files
+- create a bottom nav file

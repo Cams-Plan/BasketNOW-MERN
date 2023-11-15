@@ -2,7 +2,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { globalStyles } from '../../assets/styles/globalStyles'
 
-export default function Home() {
+export default function Home({ navigation }) {
   return (
     <View style={globalStyles.container}>
       <Text>Home</Text>
