@@ -9,9 +9,10 @@ const TopTab = createMaterialTopTabNavigator();
 
 const LockerRoomDashboardTopTabs = ({initialParams}) => {
   return (
-    <TopTab.Navigator>
+    <TopTab.Navigator id='hello'>
         <TopTab.Screen name='PlayerCard' component={LockerRoomHome} 
-        initialParams={initialParams} />
+        initialParams={initialParams}
+         />
         <TopTab.Screen name='Dashboard' component={LockerRoomHome} />
     </TopTab.Navigator>
   )
