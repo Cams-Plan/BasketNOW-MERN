@@ -16,4 +16,7 @@ export const globalStyles = StyleSheet.create({
     bottonTabIcon: {
         
     },
+    blueText: {
+        color: "#2490ab"
+    }
 })

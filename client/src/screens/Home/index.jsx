@@ -24,7 +24,7 @@ export default function Home({ navigation }) {
 
         <TouchableOpacity>
           <HomeDashboardCard>
-            <Text style={styles.cardText} >Tactical Training</Text>
+            <Text style={styles.cardText} >Your Playbook</Text>
           </HomeDashboardCard>
         </TouchableOpacity>
 

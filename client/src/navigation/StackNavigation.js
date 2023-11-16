@@ -12,7 +12,7 @@ const MainStack = () => {
   return (
     <Stack.Navigator 
     screenOptions={{headerShown: false}} 
-    initialRouteName='Tabs'
+    initialRouteName='Startup'
     id='mainStack' >
         <Stack.Screen name='Startup' component={StartUpScreen} />
         <Stack.Screen name='Tabs' component={BottomTabNavigation} />
