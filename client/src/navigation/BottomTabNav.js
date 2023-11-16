@@ -52,7 +52,7 @@ function BottomTabNavigation() {
             options={{ tabBarLabel: "Schedule" ,tabBarIcon: ({ focused })=> (
                 <MaterialIcons 
                 name='calendar-today' 
-                size={30} 
+                size={28.5} 
                 style={globalStyles.bottonTabIcon} 
                 color={iconColor} />
                 )}}

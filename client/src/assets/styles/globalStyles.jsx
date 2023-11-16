@@ -15,5 +15,5 @@ export const globalStyles = StyleSheet.create({
       },
     bottonTabIcon: {
         
-    }
+    },
 })
