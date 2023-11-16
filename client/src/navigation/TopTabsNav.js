@@ -3,15 +3,16 @@ import React from 'react'
 
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs'
 import 'react-native-gesture-handler'
-import { LockerRoomDashboard } from '../screens';
+import { LockerRoomHome } from '../screens';
 
 const TopTab = createMaterialTopTabNavigator();
 
-const LockerRoomDashboardTopTabs = () => {
+const LockerRoomDashboardTopTabs = ({initialParams}) => {
   return (
     <TopTab.Navigator>
-        <TopTab.Screen name='PlayerCard' component={LockerRoomDashboard} />
-        <TopTab.Screen name='Stats' component={LockerRoomDashboard} />
+        <TopTab.Screen name='PlayerCard' component={LockerRoomHome} 
+        initialParams={initialParams} />
+        <TopTab.Screen name='Dashboard' component={LockerRoomHome} />
     </TopTab.Navigator>
   )
 }

@@ -6,10 +6,11 @@ import { LockerRoomDashboardTopTabs } from './TopTabsNav';
 
 const Drawer = createDrawerNavigator();
 
-const LockerRoomDrawer = () => {
+const LockerRoomDrawer = ({ initialParams }) => {
   return (
     <Drawer.Navigator>
-        <Drawer.Screen name='LockerRoomDashboard' component={LockerRoomDashboardTopTabs} />
+        <Drawer.Screen name='LockerRoomDashboard' component={LockerRoomDashboardTopTabs} 
+        />
     </Drawer.Navigator>
   )
 }
