@@ -21,6 +21,34 @@ export default function CreateDrillOptionsGroup() {
         }
     ]
 
+    const findIcon = (title) => {
+        switch (title.toLowerCase()) {
+            case "reps":
+                return (<Entypo name="cycle" size={43} color="black" />)
+                
+            case "timer":
+                return (<MaterialIcons name="timer" size={43} color="black" />)
+
+            case "solo":
+                return (<Entypo name="cycle" size={43} color="black" />)
+
+            case "duo":
+                return (<Entypo name="cycle" size={43} color="black" />)
+
+            case "team":
+                return (<Entypo name="cycle" size={43} color="black" />)
+
+            case "offense":
+                return (<Entypo name="cycle" size={43} color="black" />)
+
+            case "defense":
+                return (<Entypo name="cycle" size={43} color="black" />)
+        
+            default:
+                break;
+        }
+    }
+
   return (
     <View>
       <Text>CreateDrillOptionsGroup</Text>
