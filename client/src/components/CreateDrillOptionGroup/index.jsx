@@ -78,14 +78,18 @@ export default function CreateDrillOptionsGroup() {
       </CreateDrillOption> */}
       <FlatList
       data={options}
+      style={styles.list}
+      keyExtractor={(item) => item.optionGroup}
+      numColumns={2}
+    
       renderItem={({ item })=> (
-        <>
+        <View style={styles.optionsGroupContainer} >
         <Text>{item.optionGroup}</Text>
             <View style={styles.optionsGroup} >
             {item.options.map((option)=> (
                 <CreateDrillOption>{findIcon(option)}</CreateDrillOption>
             ))}
-        </View></>
+        </View></View>
       )}
       />
     </View>
@@ -98,7 +102,17 @@ const styles = StyleSheet.create({
         aspectRatio: 1/1,
 
     },
+    list: {
+    backgroundColor: "#DDD",
+    flexWrap: "wrap",
+    flexDirection: "column",
+    justifyContent: "space-between",
+    },
+    optionsGroupContainer: {
+        flexWrap: "wrap",
+        justifyContent: "spa"
+    },
     optionsGroup: {
-        flexDirection: "row"
+        flexDirection: "row",
     }
 })
