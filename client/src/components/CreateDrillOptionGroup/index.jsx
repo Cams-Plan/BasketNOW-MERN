@@ -62,7 +62,7 @@ export default function CreateDrillOptionsGroup() {
     }
 
   return (
-    <View>
+    <View >
       <Text>CreateDrillOptionsGroup</Text>
       {/* <CreateDrillOption>
         <MaterialIcons name="timer" size={43} color="black" />
@@ -81,15 +81,21 @@ export default function CreateDrillOptionsGroup() {
       style={styles.list}
       keyExtractor={(item) => item.optionGroup}
       numColumns={2}
-    
+      columnWrapperStyle={{
+        width: '100%',
+        justifyContent: 'space-evenly'
+      }}
       renderItem={({ item })=> (
         <View style={styles.optionsGroupContainer} >
-        <Text>{item.optionGroup}</Text>
+            <Text style={styles.optionGroupText}>{item.optionGroup}</Text>
             <View style={styles.optionsGroup} >
             {item.options.map((option)=> (
+                <>
                 <CreateDrillOption>{findIcon(option)}</CreateDrillOption>
+                </>
             ))}
-        </View></View>
+            </View>
+        </View>
       )}
       />
     </View>
@@ -100,19 +106,20 @@ const styles = StyleSheet.create({
     iconImage: {
         height: 40,
         aspectRatio: 1/1,
-
     },
     list: {
-    backgroundColor: "#DDD",
+    // backgroundColor: "#DDD",
     flexWrap: "wrap",
     flexDirection: "column",
-    justifyContent: "space-between",
     },
     optionsGroupContainer: {
-        flexWrap: "wrap",
-        justifyContent: "spa"
+        // flexWrap: "wrap",
+        
     },
     optionsGroup: {
         flexDirection: "row",
+    },
+    optionGroupText: {
+        textAlign: "center"
     }
 })
