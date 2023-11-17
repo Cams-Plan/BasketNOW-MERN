@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { FlatList, Image, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import CreateDrillOption from '../CreateDrillOption';
 
@@ -6,7 +6,7 @@ import { MaterialIcons, Entypo } from '@expo/vector-icons';
 
 export default function CreateDrillOptionsGroup() {
 
-    const Options = [
+    const options = [
         {
             optionGroup: "Primary KPI", options: ["Reps", "Timer"]
         },
@@ -30,19 +30,31 @@ export default function CreateDrillOptionsGroup() {
                 return (<MaterialIcons name="timer" size={43} color="black" />)
 
             case "solo":
-                return (<Entypo name="cycle" size={43} color="black" />)
+                return (<Image style={styles.iconImage} resizeMode='contain' source={require('../../assets/images/icons/soloPlayer.png')} />)
 
             case "duo":
-                return (<Entypo name="cycle" size={43} color="black" />)
+                return (<Image 
+                    style={styles.iconImage}
+                    resizeMode='contain' 
+                    source={require('../../assets/images/icons/duoPlayer.png')} />)
 
             case "team":
-                return (<Entypo name="cycle" size={43} color="black" />)
+                return (<Image 
+                    style={styles.iconImage}
+                    resizeMode='contain' 
+                    source={require('../../assets/images/icons/team.png')} />)
 
             case "offense":
-                return (<Entypo name="cycle" size={43} color="black" />)
+                return (<Image 
+                    style={styles.iconImage}
+                    resizeMode='contain' 
+                    source={require('../../assets/images/icons/offense.png')} />)
 
             case "defense":
-                return (<Entypo name="cycle" size={43} color="black" />)
+                return (<Image 
+                    style={styles.iconImage}
+                    resizeMode='contain' 
+                    source={require('../../assets/images/icons/defense.png')} />)
         
             default:
                 break;
@@ -52,14 +64,41 @@ export default function CreateDrillOptionsGroup() {
   return (
     <View>
       <Text>CreateDrillOptionsGroup</Text>
-      <CreateDrillOption>
+      {/* <CreateDrillOption>
         <MaterialIcons name="timer" size={43} color="black" />
       </CreateDrillOption>
       <CreateDrillOption>
         <Entypo name="cycle" size={43} color="black" />
       </CreateDrillOption>
+      <CreateDrillOption>
+        <Image 
+        style={styles.iconImage}
+        resizeMode='contain' 
+        source={require('../../assets/images/icons/soloPlayer.png')} />
+      </CreateDrillOption> */}
+      <FlatList
+      data={options}
+      renderItem={({ item })=> (
+        <>
+        <Text>{item.optionGroup}</Text>
+            <View style={styles.optionsGroup} >
+            {item.options.map((option)=> (
+                <CreateDrillOption>{findIcon(option)}</CreateDrillOption>
+            ))}
+        </View></>
+      )}
+      />
     </View>
   )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    iconImage: {
+        height: 40,
+        aspectRatio: 1/1,
+
+    },
+    optionsGroup: {
+        flexDirection: "row"
+    }
+})
