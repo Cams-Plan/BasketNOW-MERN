@@ -62,20 +62,7 @@ export default function CreateDrillOptionsGroup() {
     }
 
   return (
-    <View >
-      <Text>CreateDrillOptionsGroup</Text>
-      {/* <CreateDrillOption>
-        <MaterialIcons name="timer" size={43} color="black" />
-      </CreateDrillOption>
-      <CreateDrillOption>
-        <Entypo name="cycle" size={43} color="black" />
-      </CreateDrillOption>
-      <CreateDrillOption>
-        <Image 
-        style={styles.iconImage}
-        resizeMode='contain' 
-        source={require('../../assets/images/icons/soloPlayer.png')} />
-      </CreateDrillOption> */}
+    <View style={styles.container} >
       <FlatList
       data={options}
       style={styles.list}
@@ -103,6 +90,9 @@ export default function CreateDrillOptionsGroup() {
 }
 
 const styles = StyleSheet.create({
+    container: {
+        marginTop: 30
+    },
     iconImage: {
         height: 40,
         aspectRatio: 1/1,
