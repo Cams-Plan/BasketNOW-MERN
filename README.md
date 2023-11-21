@@ -2,6 +2,8 @@
 
 ![basketNowThumbnail](https://github.com/Cams-Plan/BasketNow-React-Native-App/assets/110306796/4cb3d500-e137-42ad-b0e4-37563518b2de)
 
+## UI/UX Progress
+  Open video as Picture-in-picture to view as a small player while scrolling
 
 <div align="center" >
   <video src="https://github.com/Cams-Plan/BasketNow-React-Native-App/assets/110306796/76a247e8-3598-47b0-a315-5ee01f80e799" />
