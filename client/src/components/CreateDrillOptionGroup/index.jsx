@@ -8,16 +8,16 @@ export default function CreateDrillOptionsGroup() {
 
     const options = [
         {
-            optionGroup: "Primary KPI", options: ["Reps", "Timer"]
+            optionGroup: "Primary KPI", options: ["Reps", "Timer"], key: 0
         },
         {
-            optionGroup: "Secondary KPI", options: ["Reps", "Timer"]
+            optionGroup: "Secondary KPI", options: ["Reps", "Timer"], key: 1
         },
         {
-            optionGroup: "Players", options: ["Solo", "Duo", "Team"]
+            optionGroup: "Players", options: ["Solo", "Duo", "Team"], key: 2
         },
         {
-            optionGroup: "Type", options: ["Offense", "Defense"]
+            optionGroup: "Type", options: ["Offense", "Defense"], key: 3
         }
     ]
 
@@ -66,7 +66,7 @@ export default function CreateDrillOptionsGroup() {
       <FlatList
       data={options}
       style={styles.list}
-      keyExtractor={(item) => item.optionGroup}
+      keyExtractor={(item) => item.key}
       numColumns={2}
       columnWrapperStyle={{
         width: '100%',
@@ -78,7 +78,7 @@ export default function CreateDrillOptionsGroup() {
             <View style={styles.optionsGroup} >
             {item.options.map((option)=> (
                 <>
-                <CreateDrillOption>{findIcon(option)}</CreateDrillOption>
+                <CreateDrillOption key={option.key}>{findIcon(option)}</CreateDrillOption>
                 </>
             ))}
             </View>
