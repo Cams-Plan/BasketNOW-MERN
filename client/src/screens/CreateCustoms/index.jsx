@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { ScrollView, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { globalStyles } from '../../assets/styles/globalStyles'
 import { CreateDrillOptionGroup, CreateFormTitleDesc } from '../../components'
@@ -10,11 +10,11 @@ export default function CreateCustoms() {
   }
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <Text style={globalStyles.headerText} >Create A Custom Drill</Text>
       <CreateFormTitleDesc addDrill={addDrill} />
       <CreateDrillOptionGroup />
-    </View>
+    </ScrollView>
   )
 }
 

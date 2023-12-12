@@ -1,6 +1,6 @@
 import 'react-native-gesture-handler';
-import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
-
+// import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+import { createMaterialBottomTabNavigator } from 'react-native-paper/react-navigation';
 import { Schedule, CreateCustoms, Home } from "../screens"
 import { MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons';
 import { HomeStack } from './StackNavigation';
@@ -8,13 +8,23 @@ import { LockerRoomDrawer } from './drawerNav';
 import { globalStyles } from '../assets/styles/globalStyles';
 
 
+
 const Tab = createMaterialBottomTabNavigator();
 
-const iconColor = "#6abab6"
+// const focusedIconColor = "#6abab6"
+const focusedIconColor = "#005F6D"
+const iconColor = "#3bbedb"
+// const iconColor = "#57e9ff"
 
 function BottomTabNavigation() {
     return (
-        <Tab.Navigator >
+        <Tab.Navigator
+        activeColor="#f0edf6"
+        inactiveColor={iconColor}
+        screenOptions={{tabBarStyle: {display: "none"}}}
+        barStyle={{ backgroundColor: focusedIconColor }}
+        
+        >
             <Tab.Screen 
             name='HomeTab' 
             component={HomeStack} 
@@ -23,7 +33,7 @@ function BottomTabNavigation() {
                 name='home' 
                 size={32} 
                 style={globalStyles.bottonTabIcon} 
-                color={iconColor} />
+                color={ focused ? focusedIconColor : iconColor } />
                 )}} />
             <Tab.Screen 
             name='LockerRoomTab' 
@@ -33,7 +43,7 @@ function BottomTabNavigation() {
                 name='locker-multiple' 
                 size={30} 
                 style={globalStyles.bottonTabIcon} 
-                color={iconColor} />
+                color={ focused ? focusedIconColor : iconColor } />
                 )}} />
             <Tab.Screen 
             name='CreateTab' 
@@ -43,7 +53,7 @@ function BottomTabNavigation() {
                 name='add-circle-outline' 
                 size={30} 
                 style={globalStyles.bottonTabIcon} 
-                color={iconColor} />
+                color={ focused ? focusedIconColor : iconColor } />
                 )}}
             />
             <Tab.Screen 
@@ -54,7 +64,7 @@ function BottomTabNavigation() {
                 name='calendar-today' 
                 size={28.5} 
                 style={globalStyles.bottonTabIcon} 
-                color={iconColor} />
+                color={ focused ? focusedIconColor : iconColor } />
                 )}}
             />
         </Tab.Navigator>
