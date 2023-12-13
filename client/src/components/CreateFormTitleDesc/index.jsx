@@ -64,7 +64,7 @@ export default function CreateFormTitleDesc({ addDrill }) {
                   <Text style={{textAlign: "center", margin: 5}} >Characters remaining {150 - props.values.description.length}</Text>
                 </View>
                 <View>
-                  <Text style={styles.sectionTitle} >Step-By-Step</Text>
+                  <Text style={styles.sectionTitle} >Drill Metadata</Text>
                   <View style={styles.metaContainer}>
                     {/* ICONS */}
                     {options.map((opt => {
@@ -90,6 +90,7 @@ export default function CreateFormTitleDesc({ addDrill }) {
                 </View>
                 <View >
                   <Text style={styles.sectionTitle} >Step-By-Step</Text>
+                  <Text style={styles.sectionSubTitle} >(Optional)</Text>
                   {/* <TextInput 
                     style={styles.stepByStepInput}
                     multiline={true}
@@ -223,7 +224,15 @@ const styles = StyleSheet.create({
   sectionTitle: {
     marginTop: 15,
     fontSize: 17,
-    textAlign: "center"
+    textAlign: "center",
+    fontWeight: "bold",
+    textDecorationLine: "underline"
+  },
+  sectionSubTitle: {
+    marginTop: 5,
+    fontSize: 15,
+    textAlign: "center",
+    textDecorationLine: "underline"
   },
   stepsContainer: {
     marginTop: 15,
